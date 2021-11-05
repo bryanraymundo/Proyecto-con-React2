@@ -11,7 +11,7 @@ const navegacion = [
   { text: 'Aviso de responsabilidad', ruta: 'rutas' },
   { text: 'Contactanos', ruta: 'rutas'},
   { text: 'Acerca de', ruta: 'rutas'},
-  { text: 'Iniciar sesión', ruta: 'rutas'},
+  { text: 'Iniciar sesión', ruta: './IniciarSesion/iniciarsesion.html'},
 ];
 
 function App() {
