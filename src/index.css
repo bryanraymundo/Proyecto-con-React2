@@ -1,0 +1,17 @@
+*
+{
+    padding: 0px;
+    margin: 0px;
+}
+  
+body
+{
+    background-color: #1c8fdb;
+    box-sizing: border-box;
+}
+
+/* #root {
+  margin: 0 24px;
+  position: relative;
+  min-height: 100vh;
+} */

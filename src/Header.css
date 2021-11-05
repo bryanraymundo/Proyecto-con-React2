@@ -1,0 +1,14 @@
+header
+{
+    padding-top: 20px;
+    text-align: center;
+    background-color: #fff;
+    height: 100px;
+}
+
+header img
+{
+    display: inline-block;
+    margin: auto;
+    min-width: 100px;
+}
