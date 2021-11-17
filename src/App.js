@@ -2,16 +2,17 @@ import React from 'react';
 //import './App.css';
 
 import {Header} from './Header';
-import {NavList} from './NavList';
-import {Navegacion} from './Navegacion';
+import {NavList} from './Navegacion/NavList';
+import {Navegacion} from './Navegacion/Navegacion';
+import { Login } from './IniciarSesion/Login';
+import MenuPrincipal from './MenuPrincipal';
 
+let ses = 5;
 const navegacion = [
-  { text: 'Inicio', ruta: 'rutas' },
-  { text: 'Servicios', ruta: 'rutas' },
-  { text: 'Aviso de responsabilidad', ruta: 'rutas' },
+  { text: 'Inicio', ruta: {ses} },
   { text: 'Contactanos', ruta: 'rutas'},
   { text: 'Acerca de', ruta: 'rutas'},
-  { text: 'Iniciar sesión', ruta: './IniciarSesion/iniciarsesion.html'},
+  { text: 'Iniciar sesión', ruta: './IniciarSesion/Login.js'},
 ];
 
 function App() {
@@ -26,8 +27,11 @@ function App() {
               ruta={elementos.ruta}
             />
           ))}  
+
       </Navegacion>
-    </React.Fragment>
+      <MenuPrincipal/>
+    <Login/>
+ </React.Fragment>
   );
 }
 
