@@ -1,4 +1,5 @@
 import React from 'react';
+import {BrowserRouter, Route} from 'react-router-dom';
 //import './App.css';
 
 import {Header} from './Header/Header';
@@ -17,6 +18,10 @@ const navegacion = [
 
 function App() {
   return (
+    <BrowserRouter>
+      <Route path="/login" component={Login}/>
+    </BrowserRouter>
+    /*
     <React.Fragment>
       <Header/>
       <Navegacion>
@@ -31,7 +36,8 @@ function App() {
       </Navegacion>
       <MenuPrincipal/>
     <Login/>
- </React.Fragment>
+ </React.Fragment>*/
+
   );
 }
 
