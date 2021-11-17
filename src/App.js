@@ -1,7 +1,7 @@
 import React from 'react';
 //import './App.css';
 
-import {Header} from './Header';
+import {Header} from './Header/Header';
 import {NavList} from './Navegacion/NavList';
 import {Navegacion} from './Navegacion/Navegacion';
 import { Login } from './IniciarSesion/Login';
