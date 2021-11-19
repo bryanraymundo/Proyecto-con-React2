@@ -12,6 +12,7 @@ function MenuPrincipal()
 {
     return(
      <>
+     
     <section>
         <div className="rectangulo">
                     <h1>¿Qué puedes hacer con nosotros?</h1>
