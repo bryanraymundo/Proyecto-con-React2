@@ -9,4 +9,4 @@ function Header(){
         </header>
     );
 }
-export { Header };
+export default Header

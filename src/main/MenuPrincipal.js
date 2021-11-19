@@ -1,11 +1,11 @@
 import React from "react";
-import './App.css';
-import img1 from './main/img1.jpg';
-import img2 from './main/img2.jpg';
-import img3 from './main/img3.jpg';
-import img4 from './main/img4.jpg';
-import img5 from './main/img5.jpg';
-import img6 from './main/img6.jpg';
+import "./main.css";
+import img1 from './img1.jpg';
+import img2 from './img2.jpg';
+import img3 from './img3.jpg';
+import img4 from './img4.jpg';
+import img5 from './img5.jpg';
+import img6 from './img6.jpg';
 
 
 function MenuPrincipal()

@@ -5,13 +5,13 @@ body{
     font-family: 'Nunito', sans-serif;
 }
 
-.caja
+.caja1
 {
     border-radius: 20px;
     width: 700px;
     height: 370px;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%,-50%);
     background-color: rgb(255, 255, 255);   
@@ -20,13 +20,13 @@ body{
                     0.3em 0.3em 1em rgba(0,0,0,0.3);
 }
 
-.caja input[type = "text"], .caja input[ type = "password"]
+.caja1 input[type = "text"], .caja input[ type = "password"]
 {
 
     border: 0;
     background: none;
     display: block;
-    margin: 20px auto;
+    margin: 10px auto;
     text-align: center;
     border: 2px solid #b1b3b4;
     padding: 5px 10px;
@@ -38,7 +38,7 @@ body{
                     0.3em 0.3em 1em rgba(0, 0, 0, 0.102);
 }
 
-.caja input[type = "text"]:focus, .caja input[ type = "password"]:focus
+.caja1 input[type = "text"]:focus, .caja input[ type = "password"]:focus
 {
     border: 0;
     background: none;
@@ -55,13 +55,13 @@ body{
                     0.3em 0.3em 1em rgba(0, 0, 0, 0.102);
 }
 
-.caja h2{
+.caja1 h2{
     color: #8b9094;
     padding-top: 30px;
     padding-left: 70px;
     text-align: left;
 }
-.caja p
+.caja1 p
 {
     color: #8b9094;
     padding-top: 10px;
@@ -80,8 +80,13 @@ body{
     border-style: none;
 }
 
-.caja input[type="submit"]:hover
+.caja1 input[type="submit"]:hover
 {
     background-color: #145e8f;
     transition: all .3s;
+}
+
+.text
+{
+    color: aqua;
 }

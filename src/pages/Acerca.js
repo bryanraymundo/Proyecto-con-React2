@@ -1,13 +1,28 @@
 import React from "react";
-import './Navegacion.css';
-
 
 function Acerca()
 {
     return(
-        
-        <h>Hola</h>
+        <div>
+        <h1>Acerca de</h1>
+        <h1>Acerca de</h1>
+        <h1>Acerca de</h1>
+        <h1>Acerca de</h1>
+        <h1>Acerca de</h1>
+        <h1>Acerca de</h1>
+        <h1>Acerca de</h1>
+        <h1>Acerca de</h1>
+        <h1>Acerca de</h1>
+        <h1>Acerca de</h1>
+        <h1>Acerca de</h1>
+        <h1>Acerca de</h1>
+        <h1>Acerca de</h1>
+        <h1>Acerca de</h1>
+        <h1>Acerca de</h1>
+        <h1>Acerca de</h1>
+        <h1>Acerca de</h1>
+        </div>
     );
 }
 
-export {Acerca};
+export default Acerca;
