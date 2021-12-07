@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;0,900;1,400;1,800&display=swap');
+body {
+    padding-top: 10vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    font-family: 'Nunito';
+    /* background: #11a5df2b; */
+    width: 80vw;
+    padding: 15px;
+}
+
+.Encabezado{
+    position: absolute;
+    top: 26%;
+    color: #ffffff;
+    font-family: Nunito;
+
+}
+
+.contact-info {
+    display: flex;
+    width: 60%;
+    min-width: 59;
+}
+
+strong
+{
+    color: #1c8fdb;
+
+}
+
+form {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    box-shadow: 0 0 15px grey;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    border-radius: 15px 0px 0px 15px;
+    padding: 7px;
+
+}
+
+.details {
+    font-family: 'Nunito';
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    background: rgb(238, 238, 238);
+    color: rgb(19, 135, 212);
+    border-radius: 5px;
+    padding: 7px;
+    box-shadow: 0 0 15px rgb(46, 119, 196);
+
+}
+.contact-items{
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    /* margin-left: 5px; */
+}
+.contact-items-wrapper{
+    padding: 25px;
+    margin-top: 10%;
+}
+
+.textoabajo {
+    margin-top: 15%;
+    text-align: center;
+
+}
+
+.details p {
+    color:#868686;
+    font-size: 15px;
+    margin-left: 15px;
+
+}
+
+.details p a{
+color: #1a91e0;
+}
+.details p a:hover{
+color: #a09a9a;
+}
+
+.material-icons{
+    width: 12px;
+    margin: 5px;
+}
+
+.form2 {
+    border: 2px solid #1c8fdb;
+    margin: 5px 15px;
+    height: 25px;
+    border-radius: 15px;
+    padding-left: 20px;
+}
+
+textarea {
+    height: 150px;
+    margin: 5px 15px;
+    border-radius: 14px;
+    padding-top: 10px;
+    padding-left: 15px;
+    border: 2px solid #1c8fdb;
+}
+
+.btn {
+    margin: 5px 15px;
+    width: 80px;
+    background: #1c8fdb;
+    padding: 3px 10px;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+}
+
+
+
+    
+
+@media screen and (max-width:780px) {
+    .contact-info {
+    flex-direction: column;
+    width: 90%;
+}
+form{
+    width: 100%;
+    margin-bottom: 5px;
+}
+.details{
+    width: 100%;
+}
+}

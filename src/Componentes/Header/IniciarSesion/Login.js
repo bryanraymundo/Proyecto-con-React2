@@ -16,7 +16,7 @@ function Login()
                 <br/>
                 <a>O bien, puedes </a>
                 <a href='/registro'>Registrarse</a>  
-        </div>
+            </div>
         </form>
 
     </React.Fragment>

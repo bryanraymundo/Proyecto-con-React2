@@ -26,7 +26,7 @@ function MenuPrincipal()
                                 </ul>
                             </div>
                             <div className="elementos2">
-                                <img src="img/Denuncia-06-06.png" alt=""/>
+                                <img src={img1} alt=""/>
                             </div>                        
             </div>
         </div>
