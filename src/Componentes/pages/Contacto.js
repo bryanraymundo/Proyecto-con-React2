@@ -1,20 +1,38 @@
-import React from "react";
+import { Axios } from "axios";
+import React, { useState } from "react";
 import './Contacto.css';
+import axios from 'axios'
+//import { useState } from "react";
 
 function Contacto()
 {
+    const [nombre, setnombre] = useState("");
+    const [email, setemail] = useState("");   
+    const [telefono, settelefono] = useState("");   
+    const [descripcion, setdescripcion] = useState("");
+
+    const AddEmployee = () => {
+    Axios.post('http://localhost:3001/contacto', {
+        nombre:nombre,
+        email:email,
+        telefono:telefono,
+        descripcion:descripcion,
+    }).then(() => {
+        console.log("success");
+    });
+    };
     return(
         <div>
-                <div className="container">
+              <div className="container">
                 <h2 className="Encabezado">¡Contactanos!</h2>
                     <div className="contact-info">
                         <form action="" >
                             <h3>Escribe tus dudas aquí</h3>
-                            <input className="form2" type="text" name="fullname" id="fullname" placeholder="Nombre Completo" required/>
-                            <input className="form2" type="email" name="email" id="email" placeholder="Email" required/>
-                            <input className="form2" type="tel" name="tel" id="tel" placeholder="Telefono" required/>
+                            <input className="form2" type="text"    onChange={(event) => {setnombre(event.target.value);}}      name="fullname" id="fullname" placeholder="Nombre Completo" required/>
+                            <input className="form2" type="email"   onChange={(event) => {setnombre(event.target.value);}}      name="email" id="email" placeholder="Email" required/>
+                            <input className="form2" type="tel"     onChange={(event) => {setnombre(event.target.value);}}      name="tel" id="tel" placeholder="Telefono" required/>
                             <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Cuentanos tus inquietudes..."></textarea>
-                            <button className="btn" type="submit">Send</button>
+                            <button className="btn" type="submit"   onClick={AddEmployee}>Send</button>
                         </form>
 
                         <div className="details">
