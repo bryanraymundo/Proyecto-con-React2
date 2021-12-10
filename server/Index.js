@@ -1,28 +1,28 @@
 const express = require ("express");
 const app = express();
-const mysql = require('mysql');
-const cors=require('cors');
+const mysql = require("mysql");
+const cors=require("cors");
 
 app.use(cors());
 app.use(express.json());
 
 const db = mysql.createConnection({
-user:'root',
-host: 'localhost',
-password: 'holamama1999',
-database: 'web'
+user:"root",
+host: "localhost",
+password: "holamama1999",
+database: "mydb",
 });
 
-app.post('/create',(req,res)=>{
-    console.log(req.body);
-    const nombre=req.boddy.nombre;
-    const email=req.boddy.email;
+app.post("/create",(req,res)=>{
+    
+    const nombre_completo=req.boddy.nombre_completo;
+    const correo_e=req.boddy.correo_e;
     const telefono=req.boddy.telefono;
-    const descripcion=req.boddy.descripcion;
+  //  const descripcion=req.boddy.descripcion;
 
     db.query(
-        'INSERT INTO employees (nombre,email,telefono,descripcion) values (?,?,?,?)',
-        [nombre,email,telefono,descripcion],
+        "INSERT INTO contacto (nombre_completo,correo_e,telefono) values (?,?,?,?)",
+        [nombre_completo,correo_e,telefono],
         (err,result) => {
             if(err){
                 console.log(err);
@@ -32,6 +32,44 @@ app.post('/create',(req,res)=>{
         }
         );
 });
+
+
+app.get("/employees", (req, res) => {
+    db.query("SELECT * FROM contacto", (err, result) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.send(result);
+      }
+    });
+  });
+  
+  app.put("/update", (req, res) => {
+    const id = req.body.id;
+    const wage = req.body.wage;
+    db.query(
+      "UPDATE contacto SET wage = ? WHERE id = ?",
+      [wage, id],
+      (err, result) => {
+        if (err) {
+          console.log(err);
+        } else {
+          res.send(result);
+        }
+      }
+    );
+  });
+  
+  app.delete("/delete/:id", (req, res) => {
+    const id = req.params.id;
+    db.query("DELETE FROM contacto WHERE id = ?", id, (err, result) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.send(result);
+      }
+    });
+  });
 
 app.listen(3001 ,()=>{
     console.log("si coneccion exitosa");

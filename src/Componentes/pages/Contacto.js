@@ -1,22 +1,19 @@
-import { Axios } from "axios";
+import "./Contacto.css";
 import React, { useState } from "react";
-import './Contacto.css';
-import axios from 'axios'
-//import { useState } from "react";
+import Axios from "axios";
 
-function Contacto()
-{
-    const [nombre, setnombre] = useState("");
-    const [email, setemail] = useState("");   
+
+function Contacto(){
+    const [nombre_completo, setnombre_completo] = useState("");
+    const [correo_e, setcorreo_e] = useState("");   
     const [telefono, settelefono] = useState("");   
-    const [descripcion, setdescripcion] = useState("");
 
     const AddEmployee = () => {
-    Axios.post('http://localhost:3001/contacto', {
-        nombre:nombre,
-        email:email,
+    Axios.post("http://localhost:3005/contacto", {
+        nombre_completo: nombre_completo,
+        correo_e: correo_e,
         telefono:telefono,
-        descripcion:descripcion,
+     //   telefono: telefono,
     }).then(() => {
         console.log("success");
     });
@@ -28,9 +25,9 @@ function Contacto()
                     <div className="contact-info">
                         <form action="" >
                             <h3>Escribe tus dudas aquí</h3>
-                            <input className="form2" type="text"    onChange={(event) => {setnombre(event.target.value);}}      name="fullname" id="fullname" placeholder="Nombre Completo" required/>
-                            <input className="form2" type="email"   onChange={(event) => {setnombre(event.target.value);}}      name="email" id="email" placeholder="Email" required/>
-                            <input className="form2" type="tel"     onChange={(event) => {setnombre(event.target.value);}}      name="tel" id="tel" placeholder="Telefono" required/>
+                            <input className="form2" type="text"    onChange={(event) => {setnombre_completo(event.target.value);}}      name="fullname" id="fullname" placeholder="Nombre Completo" required/>
+                            <input className="form2" type="email"   onChange={(event) => {setcorreo_e(event.target.value);}}      name="email" id="email" placeholder="Email" required/>
+                            <input className="form2" type="tel"     onChange={(event) => {settelefono(event.target.value);}}      name="tel" id="tel" placeholder="Telefono" required/>
                             <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Cuentanos tus inquietudes..."></textarea>
                             <button className="btn" type="submit"   onClick={AddEmployee}>Send</button>
                         </form>
