@@ -2,7 +2,6 @@ import "./Contacto.css";
 import React, { useState } from "react";
 import Axios from "axios";
 
-
 function Contacto(){
     const [nombre_completo, setnombre_completo] = useState("");
     const [correo_e, setcorreo_e] = useState("");   
