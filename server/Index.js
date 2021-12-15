@@ -13,7 +13,7 @@ password: "holamama1999",
 database: "mydb",
 });
 
-app.post("/create",(req,res)=>{
+app.post("/contacto",(req,res)=>{
     
     const nombre_completo=req.boddy.nombre_completo;
     const correo_e=req.boddy.correo_e;
