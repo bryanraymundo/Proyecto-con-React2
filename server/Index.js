@@ -9,28 +9,28 @@ app.use(express.json());
 const db = mysql.createConnection({
 user:"root",
 host: "localhost",
-password: "holamama1999",
+password: "root",
 database: "mydb",
 });
 
-app.post("/create",(req,res)=>{
+app.post("/contacto",(req,res)=>{
     
-    const nombre_completo=req.boddy.nombre_completo;
-    const correo_e=req.boddy.correo_e;
-    const telefono=req.boddy.telefono;
+    const nombre_completo=req.body.nombre_completo;
+    const correo_e=req.body.correo_e;
+    const telefono=req.body.telefono;
+    const msginput=req.body.msginput;
+    
   //  const descripcion=req.boddy.descripcion;
-
     db.query(
-        "INSERT INTO contacto (nombre_completo,correo_e,telefono) values (?,?,?,?)",
-        [nombre_completo,correo_e,telefono],
+        "INSERT INTO contacto (nombre_completo,correo_e,telefono, Mensaje) values (?,?,?,?,?)",
+        [nombre_completo,correo_e,telefono,msginput],
         (err,result) => {
             if(err){
                 console.log(err);
             }else{
                 res.send("values Insertd");
             }
-        }
-        );
+        });
 });
 
 app.get("/employees", (req, res) => {
@@ -70,6 +70,6 @@ app.get("/employees", (req, res) => {
     });
   });
 
-app.listen(3001 ,()=>{
+app.listen(3000 ,()=>{
     console.log("si coneccion exitosa");
 });
