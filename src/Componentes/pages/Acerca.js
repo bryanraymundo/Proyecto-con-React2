@@ -3,7 +3,8 @@ import React from "react";
 function Acerca()
 {
     return(
-        <div>
+        
+        <form class="caja" method="post">
             <center> 
         <h1>Acerca de nosotros</h1>
 
@@ -18,8 +19,9 @@ function Acerca()
             comunidad más tranquila y con mejores condiciones. </p>
 
             </center>
+            </form>
 
-        </div>
+      
     );
 }
 
