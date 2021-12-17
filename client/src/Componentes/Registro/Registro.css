@@ -80,6 +80,20 @@ body{
     border-style: none;
 }
 
+.boton2
+{
+    margin-top: 20px;
+    width: 40%;
+    margin-left: 200px;
+    padding: 10px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #1c8fdb;
+    border-radius: 10px;
+    border-style: none;
+}
+
+
 .caja1 input[type="submit"]:hover
 {
     background-color: #145e8f;
