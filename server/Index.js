@@ -19,93 +19,30 @@ app.post('/registro', (req, res) => {
 	const username = req.body.username;
 	const password = req.body.password;
 
-  datos_base.query("INSERT INTO usuario (Nombre, contrasenia) VALUES (?,?)", 
-  [username, password]),
-  (err, result) => { console.log(err);
-  }
+  datos_base.query("INSERT INTO usuario (Nombre, contrasenia) VALUES (?,?)", [username, password], (err, result) =>
+  {
+    if (err) {
+        res.status(500).send(err);
+    }
+    else
+    {
+      if (result.length > 0)
+      {
+        res.status(200).send(result[0])
+      }
+      else
+      {
+        res.status(400).send("No existe el usuario")
+      }
+   }
+  })
+  datos_base.end()
 })
 
-app.listen(3001, ()=> {
+app.get('/', (req, res) => {
+  res.send('TODO OK')
+})
+
+app.listen(4000, ()=> {
   console.log("corriendo en el servicor 3001");
 });
-
-
-
- /*
-
-const mysql = require("mysql");
-const cors=require("cors");
-
-
-
-app.use(cors());
-app.use(express.json());
-
-const db = mysql.createConnection({
-user:"root",
-host: "localhost:3306",
-password: "holamama1999",
-database: "mydb",
-});
-
-app.post("/contacto",(req,res)=>{
-    
-    const nombre_completo=req.boddy.nombre_completo;
-    const correo_e=req.boddy.correo_e;
-    const telefono=req.boddy.telefono;
-  //  const descripcion=req.boddy.descripcion;
-
-    db.query(
-        "INSERT INTO contacto (nombre_completo,correo_e,telefono) values (?,?,?,?)",
-        [nombre_completo,correo_e,telefono],
-        (err,result) => {
-            if(err){
-                console.log(err);
-            }else{
-                res.send("values Insertd");
-            }
-        }
-        );
-});
-
-app.get("/employees", (req, res) => {
-    db.query("SELECT * FROM contacto", (err, result) => {
-      if (err) {
-        console.log(err);
-      } else {
-        res.send(result);
-      }
-    });
-  });
-  
-  app.put("/update", (req, res) => {
-    const id = req.body.id;
-    const wage = req.body.wage;
-    db.query(
-      "UPDATE contacto SET wage = ? WHERE id = ?",
-      [wage, id],
-      (err, result) => {
-        if (err) {
-          console.log(err);
-        } else {
-          res.send(result);
-        }
-      }
-    );
-  });
-  
-  app.delete("/delete/:id", (req, res) => {
-    const id = req.params.id;
-    db.query("DELETE FROM contacto WHERE id = ?", id, (err, result) => {
-      if (err) {
-        console.log(err);
-      } else {
-        res.send(result);
-      }
-    });
-  });
-
-app.listen(3001 ,()=>{
-    console.log("si coneccion exitosa");
-});
-*/

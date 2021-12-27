@@ -11,7 +11,7 @@ function Navegacion()
             <li><a href="/">Home</a></li>
             <li><a href="/acerca">Acerca</a></li>
             <li><a href="/contacto">Contacto</a></li>
-            <li><a href="/login">Acceder</a></li>
+            <li><a href="http://localhost:3000/login">Acceder</a></li>
           </ul>
           </nav>
         </div>

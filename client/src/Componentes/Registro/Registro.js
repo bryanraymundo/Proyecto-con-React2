@@ -11,7 +11,7 @@ function Login()
     const [passwordReg, setPassword] = useState('');
 
     const Registro = ()  => {
-        Axios.post('http://localhost:3001/registro', {
+        Axios.post('localhost:3001/registro', {
          username: usernameReg, 
          password: passwordReg,
         }).then((Response) => {console.log(Response);

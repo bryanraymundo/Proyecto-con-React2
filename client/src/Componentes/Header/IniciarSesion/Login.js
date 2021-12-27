@@ -20,6 +20,7 @@ function Login()
 */
     return(
     <React.Fragment>
+
         <form class="caja" method="post">
             <h2>Inicia sesión</h2>
             <p>Nombre de Usuario</p>

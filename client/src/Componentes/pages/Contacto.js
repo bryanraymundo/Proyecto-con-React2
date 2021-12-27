@@ -19,7 +19,7 @@ function Contacto(){
     };
     return(
         <div>
-              <div className="container">
+              <div className="container2">
                 <h2 className="Encabezado">¡Contactanos!</h2>
                     <div className="contact-info">
                         <form action="" >
